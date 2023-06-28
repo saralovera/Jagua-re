@@ -1,0 +1,60 @@
+{% extends 'base_2.html' %}
+{% block contenido %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="bg-white py-24 md:py-32">
+      <div class="ml-80 gap-x-8 gap-y-20 px-6 lg:px-8">
+        <div class="max-w-2xl xl:col-span-2"></div>
+        <ul
+          role="list"
+          class="mr-80 -mt-12 space-y-12 divide-y divide-gray-200 xl:col-span-3"
+        >
+          <li class="mr-24 flex flex-col gap-10 pt-12 sm:flex-row">
+            <img
+              class="w-80 h-80 rounded-2xl object-cover"
+              src="data:;base64,{{dato.imagen}}"
+              alt=""
+            />
+            <div class="max-w-xl flex-auto">
+              <h3
+                class="text-lg font-semibold leading-8 tracking-tight text-gray-900"
+              >
+                Datos del Animal
+              </h3>
+              <p class="text-base leading-7 text-gray-600">{{dato.animal}}</p>
+              <p class="mt-6 text-base leading-7 text-gray-600">
+                Raza: {{dato.raza}}
+                <br />
+                Color: {{dato.color}}
+                <br />
+                Ciudad: {{dato.ciudad}}
+                <br />
+                Barrio: {{dato.barrio}}
+                <br />
+                Telefono: {{dato.telefono}}
+                <br />
+              </p>
+              <ul role="list" class="mt-6 flex gap-x-6">
+          
+              </ul>
+            </div>
+          </li>
+
+          <!-- More people... -->
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+{% endblock %}

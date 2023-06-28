@@ -1,0 +1,24 @@
+{% extends 'base_1.html' %}
+{% block contenido %}
+
+      <div class="bg-mx-auto flex justify-center items center h-screen bg-gradient-to-b from-white lg:col-end-1 lg:w-full rounded-md">
+        <!-- We've used 3xl here, but feel free to try other max-widths based on your needs -->
+        <!-- <div class="flex justify-center items center h-full w-full bg-gradient-to-b from-slate-200 to-none md:w-auto lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8 rounded-md m-4 p-4 ml-32"> x div degradado -->
+          <!-- Content goes here -->
+         <div class="text-center flex items-center justify-center">
+          <a href="/encontre_mascota"><button class="bg-[#B2C96B] hover:bg-[#AAD8D7] text-gray-800 font-bold py-2 px-4 rounded-lg h-96 w-96 items-center mr-24 drop-shadow-2xl">
+            <div>
+                <img src="static/img/encontre.png" class="w-80 h-80  m-auto z-10"> </img>
+            <div class="align-center"></div>
+            </div>
+          </button></a>
+          <a href="/perdi_mascota"><button class="bg-[#B2C96B] hover:bg-[#AAD8D7] text-gray-800 font-bold py-2 px-4 rounded-lg h-96 w-96 items-center mr-24 mt-0 drop-shadow-2xl">
+          <div>
+              <img src="static/img/perdi.png" class="w-80 h-80  m-auto z-10"> </img>
+          <div class="align-center"> </div>
+          </button></a>
+         </div>
+      </div>
+      
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'base_1.html' %}
+{% block contenido %}
+
+<!-- LISTA DE COINCIDENCIAS -->
+<div class="bg-[url('/static/img/arrugado.png')] bg-cover w-full h-full px-8">
+<!-- EMPIEZA EL DIV DE MI TITULO --> 
+    <div class="mx-auto max-w-3xl pt-8">
+        <h2 class="text-center  text-3xl font-bold  text-[#EEAB6C] sm:text-4xl"> Posibles Coincidencias </h2>
+        <p class="mt-4 text-center text-lg leading-8 text-black"> Estas son las posibles coincidencias que otros usuarios han reportado </p>
+      </div> 
+
+    <div class="justify-center grid grid-cols-3 gap-4 mx-auto max-w-7xl px-6 text-center lg:px-8">
+      
+    <!-- INICIO DE LISTA DE COINCIDENCIAS -->
+    {% for dato in datos  %}
+      <ul role="list" class=" my-12 w-72">
+        <li class="rounded-2xl bg-[#B2C96B] px-8 py-10">
+          <a href="/descripcion/{{dato.id}}">
+          <img class="object-cover mx-auto h-48 w-48 rounded-full md:h-56 md:w-56" src="data:;base64,{{dato.imagen}}" alt="gatito1"></a>
+          <h3 class="mt-6 text-base font-semibold leading-7 tracking-tight text-white"> Posible Coincidencia </h3>
+          <p class="text-sm leading-6 mb-8 text-black"> {{dato.animal}}, {{dato.color}}</p>
+            <a href="#" class="flex flex-row text-gray-400 hover:text-gray-300 justify-center">
+              <img class="h-8 w-8 justify-self-start mx-2" src="static/img/pin.png" alt="">
+              <p class="text-sm leading-6 text-black justify-items-center mt-2"> {{dato.barrio}},{{dato.ciudad}} </p>
+            </a>
+        </li>
+      </ul>
+      {% endfor %}    
+    </div>
+  </div>
+
+{% endblock %}

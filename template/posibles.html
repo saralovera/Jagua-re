@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for dato in datos  %}
+<a href="/descripcion/{{dato.id}}">
+    foto <img src="data:;base64,{{dato.imagen}}"/></a>
+    animal {{dato.animal}}
+    raza {{dato.raza}}
+    color {{dato.color}} 
+    ciudad {{dato.ciudad}}
+    barrio {{dato.barrio}} 
+    telefono {{dato.telefono}} 
+    <br>
+    {% endfor %}
+
+    <a href="/"><button>Pagina Principal</button>
+    </a>
+    <a href="/perdi"><button>Atras</button>
+    </a>
+</body>
+</html>
